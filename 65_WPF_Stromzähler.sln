@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "65_WPF_Stromzähler", "65_WPF_Stromzähler\65_WPF_Stromzähler.csproj", "{885BB6A7-38AC-4AF9-B0DF-B011DCCDDBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StromzählerContext", "StromzählerContext\StromzählerContext.csproj", "{5CC51992-8EC1-4410-92EF-6B89666B76AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{885BB6A7-38AC-4AF9-B0DF-B011DCCDDBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885BB6A7-38AC-4AF9-B0DF-B011DCCDDBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885BB6A7-38AC-4AF9-B0DF-B011DCCDDBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885BB6A7-38AC-4AF9-B0DF-B011DCCDDBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC51992-8EC1-4410-92EF-6B89666B76AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC51992-8EC1-4410-92EF-6B89666B76AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC51992-8EC1-4410-92EF-6B89666B76AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC51992-8EC1-4410-92EF-6B89666B76AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABB21C17-BDC5-4002-AB3E-8B67E328868D}
+	EndGlobalSection
+EndGlobal

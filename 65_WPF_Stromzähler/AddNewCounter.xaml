@@ -1,0 +1,37 @@
+﻿<mah:MetroWindow x:Class="_65_WPF_Stromzähler.AddNewCounter"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 mc:Ignorable="d"
+                 Title="Bearbeiten" Height="325" Width="300" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <GroupBox Grid.Row="0" Header="Stromzähler" Margin="5">
+            <DataGrid Height="Auto" Width="Auto" AutoGenerateColumns="False" x:Name="counterTable"
+                      Margin="5" IsReadOnly="True" MouseDoubleClick="Bearbeiten">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Zählername" Width="*" Binding="{Binding Name}" />
+                    <DataGridTemplateColumn Header="Aktion">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Löschen" Margin="5" Click="BtnCounterLöschen" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <Button Grid.Row="1" Content="Anlegen" Click="BtnCounterAnlegen" Margin="10"/>
+    </Grid>
+</mah:MetroWindow>
