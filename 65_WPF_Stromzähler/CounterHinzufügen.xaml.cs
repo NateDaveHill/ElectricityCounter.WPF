@@ -36,6 +36,8 @@ public partial class CounterHinzufügen
     private void BtnSpeichern(object sender, RoutedEventArgs e)
     {
         using SzContext context = new();
+        context.Database.EnsureCreated();
+
         foreach (var counter in CounterList)
         {
             if (newCounterNameHinzufügen.Text == counter.Name)
@@ -86,6 +88,8 @@ public partial class CounterHinzufügen
     public void FillCounterList()
     {
         using SzContext context = new();
+        context.Database.EnsureCreated();
+
         var counter = context.Counters.Select(x => x).ToList();
         foreach (var item in counter)
         {

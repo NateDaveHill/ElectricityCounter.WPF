@@ -123,6 +123,8 @@ public partial class MainWindow
     {
         using SzContext context = new();
 
+        context.Database.EnsureCreated();
+
         var counterList = context.Counters.Select(x => x).ToList();
 
         counterList.Add(new Counter

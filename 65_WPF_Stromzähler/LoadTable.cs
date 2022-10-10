@@ -10,6 +10,7 @@ public class LoadTable
     public List<CounterValue> loadTable()
     {
         using SzContext context = new();
+        context.Database.EnsureCreated();
 
         return context.CounterValues.Include(x => x.Counter).Select(x => new CounterValue
         {

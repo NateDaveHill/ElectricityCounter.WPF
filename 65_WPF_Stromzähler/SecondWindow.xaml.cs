@@ -20,6 +20,7 @@ public partial class SecondWindow
     {
         InitializeComponent();
         GetCounterName();
+        context.Database.EnsureCreated();
         calBoxDate.DisplayDate = DateTime.Now;
 
         var currentCbSelection = MainWindow.cbCounter.SelectedValue;

@@ -33,6 +33,8 @@ public partial class AddNewCounter
     private void BtnCounterLöschen(object sender, RoutedEventArgs e) 
     {
         using SzContext context = new SzContext();
+        context.Database.EnsureCreated();
+
 
         Data = (Counter) counterTable.SelectedValue;
 
@@ -83,6 +85,8 @@ public partial class AddNewCounter
     public List<Counter> LoadCounterTable()
     {
         using SzContext context = new();
+        context.Database.EnsureCreated();
+
 
         return context.Counters.Select(x => new Counter
         {

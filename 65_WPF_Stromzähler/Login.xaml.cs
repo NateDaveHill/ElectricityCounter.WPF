@@ -16,11 +16,23 @@ public partial class Login
     public Login()
     {
         InitializeComponent();
+
+        context.Database.EnsureCreated();
+
+        //TEST USERLOGIN
+        //context.UserLogins.Add(new UserLogin
+        //{
+        //    Username = "login",
+        //    Password = encrypting.ComputeStringToSha256HashMethod("login")
+        //});
+        //context.SaveChanges();
     }
 
     //Buttons for this Class
     private void BtnAnmelden(object sender, RoutedEventArgs e)
     {
+        context.Database.EnsureCreated();
+
         var encodedPassword = encrypting.ComputeStringToSha256HashMethod(txtUserPassword.Password);
 
         var userLogin = context.UserLogins.Where(x => x.Username == TxtUserName.Text && x.Password == encodedPassword)

@@ -12,6 +12,8 @@ public partial class BenutzerRegistrierung
     public BenutzerRegistrierung()
     {
         InitializeComponent();
+        context.Database.EnsureCreated();
+
     }
 
     //Buttons for this Class
